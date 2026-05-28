@@ -1,0 +1,3 @@
+{
+  "extends": ["github>oaslananka/.github:renovate-config"]
+}

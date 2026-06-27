@@ -218,7 +218,7 @@ jobs:
           } >> "$GITHUB_OUTPUT"
 
       - name: Invoke Jules
-        if: steps.ctx.outputs.skip != 'true'
+        if: steps.ctx.outputs.skip != 'true' && secrets.JULES_API_KEY != ''
         uses: google-labs-code/jules-invoke@v1
         with:
           jules_api_key: ${{ secrets.JULES_API_KEY }}
